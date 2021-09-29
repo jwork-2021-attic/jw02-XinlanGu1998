@@ -8,7 +8,7 @@ public class Scene {
     public static void main(String[] args) throws IOException {
         int row = 16, col = 16;
             
-        Line line = new Line(row*col);
+        Line line = new Line(row);
         ColorReader colorReader = new ColorReader("c256.png",16,16);
         for (int i = 0; i < row; i++){
             for (int j = 0; j < col; j++){

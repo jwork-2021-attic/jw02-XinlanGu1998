@@ -19,15 +19,18 @@
 ②排序的操作者老爷爷定义为单例Geezer，但是蛇精或者其他人物也有可能扮演这个操作者的角色（这里命名为Commander），场景中可以有爷爷指挥葫芦娃、蛇精指挥妖怪，两个人执行相似的操作，两个人都是Commander，可以分别使用不同的sorter、排序不同的对象. Commander应定义为一个抽象类或者接口，而爷爷或蛇精或其他操作者是实现Commander类的类的对象。Geezer.execute()中直接调用Gourd类的方法，则Geezer实际上是只能操作Gourd类这种具体的Linable的，如果设计了新类Monster也实现， Geezer无法操作Monster。可以将对Linable的通用操作放到Commander类中，将execute()之类的方法设为abstract，而在Geezer类的实现中再规定Geezer只能操作Gourd，Snake（蛇精）只能操作Monsters这种类型限制和Geezer必须是单例的限制。
 
 ## 任务二
-
+按照上述改进思路，基于example代码进行修改实现了任务要求。
+另外增加了ColorReader类用于从png图片读取颜色值。
 类图：
 ![](http://www.plantuml.com/plantuml/png/dLAnZjGm4Etz5TPMZdQ3HElg40KKW80LDAShPfDXprh7jkm975hjlsF7Th89eg69FJFFxxsPoKCWy3GEcYb3w7z0X_neVRnU6UTxRQ4Ng750Gq56oEDJa_8XGiHqEoDzrc1YS6Eiqn02_pAgxf99k1fSUNr7sqAcukaUVe4JZVnfLRzGl4Tm_ykmDF916JXfd3e9qQSDYfGrmfMBh9dykBPJOSrSBvNle4UCwQYGXE0Ko4D7_AqT1Z1ziHOcbpARJGa7Fk0q91S_yaXUcNDJpiUd1BbMhXk-O3SIYa3eP2ZGwYuWPLgn4ba0MXdyvaGwPEmUgyeosQE12t9y8JHzM3bl_orzO_NvHsl2PYjtKsxzuNmuIQuCfUYlEJDU2KH6Hc3zYxw2kUJPfaJQwRm8C9QUqSjtTlJzzbU9yb5xrWgpM9piFXM5HdEcvrcBx1lluNVKAixPteqaT0vgyi1LUb7Kaa6H4nMmTl2ggaOh6oPMIrk9XgM5bc1Rl9jyNZBVlTxnrgPZMHjBsbFAjYtVVTgjpR1Lb76Pekw1FQ3fnq7_0G00)
-
-实现效果：
-![](../images/0.png)
-![](../images/1.png)
-![](../images/2.png)
 
 由于asciinema未能安装成功，视频请见：
 [task2视频（B站）](https://www.bilibili.com/video/BV1PQ4y167Em/)
 或下载`/videos/jw02-task2.MOV`
+
+## 任务三
+代码基于任务二，类图相同，仅修改了Line类长度的定义（改成length=边长的平方）、Line.ToString()和Monster.ToString()实现了输出上的区别。
+
+视频请见：
+[task3视频（B站）](https://www.bilibili.com/video/BV17R4y1n7yM/)
+或下载`/videos/jw02-task3.MOV`

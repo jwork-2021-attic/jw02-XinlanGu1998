@@ -2,19 +2,21 @@ package S202220005;
 
 public class Line {
 
-    public int length;
+    public int sideLen, totalLen;
 
     public Line(int length) {
-        this.positions = new Position[length];
-        this.length = length;
+        sideLen = length;
+        totalLen = sideLen * sideLen;
+        this.positions = new Position[totalLen];
+        
     }
 
     private Position[] positions;
 
     public void putRandomly(Linable linable){
-        int i = (int) (Math.random()*length); 
+        int i = (int) (Math.random()*totalLen); 
         while (this.positions[i] != null){
-            i = (i+1)%length;
+            i = (i+1)%totalLen;
         }
         this.positions[i] = new Position(linable);
     }
@@ -52,9 +54,12 @@ public class Line {
 
     @Override
     public String toString() {
-        String lineString = "\t";
-        for (Position p : positions) {
-            lineString += p.linable.toString();
+        String lineString = "";
+        for (int i = 0; i < sideLen; i++){
+            for (int j = 0; j < sideLen; j++){
+                lineString += positions[i*sideLen+j].linable.toString();
+            }
+            lineString += "\n";
         }
         return lineString;
     }
