@@ -8,17 +8,22 @@ import javax.imageio.ImageIO;
 
 public class ColorReader {
     private BufferedImage image;
-    int row, columns;
-    int xStart, yStart;
-    int xOffset, yOffset;
+    int rows, columns;
+    int xStart, yStart, xOffset, yOffset;
     public ColorReader(String filepath, int rows, int columns) throws IOException{
         image = ImageIO.read(new File(filepath));
+        this.rows = rows;
+        this.columns = columns;
         int width = image.getWidth();
         int height = image.getHeight();
         xOffset = width / columns;
         yOffset = height / rows;
         xStart = xOffset / 2;
         yStart = yOffset / 2;
+    }
+
+    public int[] GetColor(int i){
+        return GetColor(i/columns, i%columns);
     }
 
     public int[] GetColor(int r, int c){
