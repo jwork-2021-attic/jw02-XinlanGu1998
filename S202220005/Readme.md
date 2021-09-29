@@ -24,13 +24,9 @@
 类图：
 ![](http://www.plantuml.com/plantuml/png/dLAnZjGm4Etz5TPMZdQ3HElg40KKW80LDAShPfDXprh7jkm975hjlsF7Th89eg69FJFFxxsPoKCWy3GEcYb3w7z0X_neVRnU6UTxRQ4Ng750Gq56oEDJa_8XGiHqEoDzrc1YS6Eiqn02_pAgxf99k1fSUNr7sqAcukaUVe4JZVnfLRzGl4Tm_ykmDF916JXfd3e9qQSDYfGrmfMBh9dykBPJOSrSBvNle4UCwQYGXE0Ko4D7_AqT1Z1ziHOcbpARJGa7Fk0q91S_yaXUcNDJpiUd1BbMhXk-O3SIYa3eP2ZGwYuWPLgn4ba0MXdyvaGwPEmUgyeosQE12t9y8JHzM3bl_orzO_NvHsl2PYjtKsxzuNmuIQuCfUYlEJDU2KH6Hc3zYxw2kUJPfaJQwRm8C9QUqSjtTlJzzbU9yb5xrWgpM9piFXM5HdEcvrcBx1lluNVKAixPteqaT0vgyi1LUb7Kaa6H4nMmTl2ggaOh6oPMIrk9XgM5bc1Rl9jyNZBVlTxnrgPZMHjBsbFAjYtVVTgjpR1Lb76Pekw1FQ3fnq7_0G00)
 
-由于asciinema未能安装成功，视频请见：
-[task2视频（B站）](https://www.bilibili.com/video/BV1PQ4y167Em/)
-或下载`/videos/jw02-task2.MOV`
-
 ## 任务三
 代码基于任务二，类图相同，仅修改了Line类长度的定义（改成length=边长的平方）、Line.ToString()和Monster.ToString()实现了输出上的区别。
 
-视频请见：
-[task3视频（B站）](https://www.bilibili.com/video/BV17R4y1n7yM/)
-或下载`/videos/jw02-task3.MOV`
+由于asciinema未能安装成功，视频请见：
+[任务2&3视频（B站）](https://www.bilibili.com/video/BV1PQ4y167Em/)
+或下载`/videos/task2&3.MOV`
