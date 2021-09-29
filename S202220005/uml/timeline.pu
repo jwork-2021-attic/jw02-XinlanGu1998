@@ -1,0 +1,21 @@
+@startuml
+control     sorter      as sorter
+actor       theGeezer   as theGeezer
+queue       line        as line
+'participant log         as log
+
+'boundary    boundary    as Foo2
+'entity      entity      as Foo4
+'database    database    as Foo5
+'collections collections as Foo6
+
+line -> line : 创建
+line -> line : put()
+note right : 将7个葫芦娃放置在随机position
+theGeezer -> theGeezer : 获取唯一实例
+sorter -> sorter :创建
+note right: 创建为BubbleSorter
+sorter -> theGeezer : setSorter()
+theGeezer -> line : lineUp()
+note right : lineUp()过程输出到log中
+@enduml
